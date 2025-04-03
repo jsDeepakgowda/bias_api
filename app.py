@@ -36,7 +36,11 @@ NEWS_API_KEY= "357ea330ce7d4b1dbb9c9136cd2d5f62"
 GNEWS_API_KEY = "16b9244ea8ad693aa9e9529a544ba766"
 
 openai.api_key = OPENAI_API_KEY
-nltk.download('punkt')
+nltk_data_path = os.path.join(os.getcwd(), "nltk_data")
+os.makedirs(nltk_data_path, exist_ok=True)
+nltk.data.path.append(nltk_data_path)
+nltk.download('punkt', download_dir=nltk_data_path)
+nltk.download('punkt_tab', download_dir=nltk_data_path)
 
 
 # Stopwords list for keyword extraction
