@@ -32,8 +32,8 @@ app.add_middleware(
 
 # Load API keys from environment variables
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
-NEWS_API_KEY= os.getenv("NEWS_API_KEY")
-GNEWS_API_KEY = os.getenv("GNEWS_API_KEY")
+NEWS_API_KEY= "357ea330ce7d4b1dbb9c9136cd2d5f62"
+GNEWS_API_KEY = "16b9244ea8ad693aa9e9529a544ba766"
 
 openai.api_key = OPENAI_API_KEY
 nltk.download('punkt')
